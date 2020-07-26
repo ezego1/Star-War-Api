@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/grid.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     <script src="./app.js"></script>
+
     <title>Actors Gallery</title>
 </head>
 <body>
@@ -28,11 +28,22 @@
         </div>
     </header>
     <section class="gallery">
-    <!-- <div class="span-1">
+    <!-- <a href="#modal">
+        <div class="span-1">
             <img src="./resources/actors/actor1.jpg" alt="">
             <p>here we are</p>
-        </div>  
-        <div class="span-1">
+        </div> 
+    </a> -->
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <a href="#" class="modal__close">&times;</a>
+            <h1 class="modal__header">Name: Mr Nwabueze</h1>
+            <p class="modal__paragraph">Age: </p>
+            <p class="modal__paragraph">Height: </p>
+            <p class="modal__paragraph">Gender: </p>
+        </div>
+    </div> 
+       <!-- <div class="span-1">
             <img src="./resources/actors/actor1.jpg" alt="">
             <p>here we are</p>
         </div>
