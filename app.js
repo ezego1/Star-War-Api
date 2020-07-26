@@ -1,8 +1,12 @@
+import User from './User/User.js'
+
+
 document.addEventListener('DOMContentLoaded', async() => {
     try {
+    
         const baseUrl = 'https://swapi.dev/api/people/'
     
-        let card = document.querySelector('.gallery')
+        const card = document.querySelector('.gallery')
         
         const response = await fetch(baseUrl)
     
@@ -11,8 +15,7 @@ document.addEventListener('DOMContentLoaded', async() => {
         }
         
         const data = await response.json()
-        let {results} = data
-        console.log(data)
+        const {results} = data
         results.map((actor, index) => {
             const htmlElement = `        
             <a href="#modal">
@@ -24,29 +27,21 @@ document.addEventListener('DOMContentLoaded', async() => {
 
             card.innerHTML += htmlElement
         });
-    
+
+        document.querySelectorAll('.span-1').forEach((el, index) => {
+            el.addEventListener('click', () => {
+                const uiName = document.getElementById(index).innerHTML
+                results.map(obj => {
+                    if (obj.name === uiName) {
+                        const {name, height, gender, birth_year} = obj
+                        const user = new User(name, height, gender, birth_year).getDetails()
+                    }
+                })
+            })
+        })
+        
     } catch (error) {
         console.log(error)
     }
-
-    class User {
-        constructor(name, gender, age, height) {
-            this.name = name
-            this.gender = gender
-            this.age = age 
-            this.height = height
-        }
-
-        getDetails() {
-
-        }
-    }
-
-    document.querySelectorAll('.span-1').forEach((el, index) => {
-        el.addEventListener('click', () => {
-            name = document.getElementById(index).innerHTML
-            console.log(name)
-        })
-    })
-
+    
 })

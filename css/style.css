@@ -144,10 +144,23 @@ header {
     visibility: hidden;
     transition: .5s ease;
     color: hsl(0, 0%, 100%);
-  background: linear-gradient(to right bottom, #009FFF, #ec2F4B); */
-  box-shadow: .4rem .4rem 2.4rem .2rem hsla(236, 50%, 50%, 0.3); */
-
+    background: linear-gradient(to right bottom, #009FFF, #ec2F4B);
+    box-shadow: .4rem .4rem 2.4rem .2rem hsla(236, 50%, 50%, 0.3);
+    text-align: center;
 }
+
+.modal__paragraph {
+    letter-spacing: .15em;
+    margin-bottom: 1em;
+}
+
+.modal__h1 {
+    margin-top: 1em;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #ec2f4B;
+}
+
 .modal__close {
     color: #009FFF;
     font-size: 2em;
