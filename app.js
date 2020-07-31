@@ -3,6 +3,18 @@ import User from './User/User.js'
 
 document.addEventListener('DOMContentLoaded', async() => {
     try {
+        const starImages = [
+            "./resources/actors/starwars_PNG41.png",
+            "./resources/actors/starwars_PNG15.png",
+            "./resources/actors/starwars_PNG1.png",
+            "./resources/actors/starwars_PNG5.png",
+            "./resources/actors/starwars_PNG36.png",
+            "./resources/actors/starwars_PNG43.png",
+            "./resources/actors/starwars_PNG42.png",
+            "./resources/actors/starwars_PNG20.png",
+            "./resources/actors/starwars_PNG12.png",
+            "./resources/actors/starwars_PNG45.png"
+        ]
     
         const baseUrl = 'https://swapi.dev/api/people/'
     
@@ -20,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async() => {
             const htmlElement = `        
             <a href="#modal">
             <div class="span-1">
-                <img src="./resources/actors/actor1.jpg" alt="">
+                <img src=${starImages[index]} alt="">
                 <p id='${index}'>${actor.name}</p>
             </div> 
             </a>`
